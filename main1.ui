@@ -1,0 +1,1290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>660</width>
+    <height>678</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="currentIndex">
+       <number>5</number>
+      </property>
+      <property name="usesScrollButtons">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="tabDB">
+       <attribute name="title">
+        <string>База данных</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <property name="leftMargin">
+         <number>20</number>
+        </property>
+        <property name="topMargin">
+         <number>20</number>
+        </property>
+        <property name="rightMargin">
+         <number>20</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>10</number>
+        </property>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="cbExpNumber">
+          <property name="insertPolicy">
+           <enum>QComboBox::InsertAlphabetically</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="cbExpType">
+          <property name="insertPolicy">
+           <enum>QComboBox::InsertAlphabetically</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cbMaterial">
+          <property name="insertPolicy">
+           <enum>QComboBox::InsertAlphabetically</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>Номер образца</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Тип эксперимента</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>Материал</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Файл базы данных</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_6"/>
+        </item>
+        <item row="0" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLineEdit" name="leDatabaseFile">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="tbOpenDatabase">
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="1">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Осциллограмма</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <layout class="QVBoxLayout" name="mplLayout">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="title">
+             <string>Каналы</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <layout class="QVBoxLayout" name="vlChannels"/>
+             </item>
+             <item>
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Данные</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Стержень 2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Образец</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QTableWidget" name="tBar2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>10</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+              <kerning>true</kerning>
+             </font>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>false</bool>
+            </property>
+            <property name="showGrid">
+             <bool>true</bool>
+            </property>
+            <property name="gridStyle">
+             <enum>Qt::SolidLine</enum>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderStretchLastSection">
+             <bool>false</bool>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>L, мм</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Ld, мм</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>c, м/c</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>E, МПа</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>D, мм</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>k</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>материал</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>Значение</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTableWidget" name="tBar1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>10</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+              <kerning>true</kerning>
+             </font>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>false</bool>
+            </property>
+            <property name="showGrid">
+             <bool>true</bool>
+            </property>
+            <property name="gridStyle">
+             <enum>Qt::SolidLine</enum>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderStretchLastSection">
+             <bool>false</bool>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>L, мм</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Ld, мм</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>c, м/c</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>E, МПа</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>D, мм</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>k</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>материал</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>Значение</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Стержень 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QTableWidget" name="tSample">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16000000</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+              <kerning>true</kerning>
+             </font>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>false</bool>
+            </property>
+            <property name="showGrid">
+             <bool>true</bool>
+            </property>
+            <property name="gridStyle">
+             <enum>Qt::SolidLine</enum>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderStretchLastSection">
+             <bool>false</bool>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>L0, мм</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>D, мм</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>L, мм</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>Значение</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Ударник</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTableWidget" name="tExperiment">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>100</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777214</width>
+              <height>120</height>
+             </size>
+            </property>
+            <property name="baseSize">
+             <size>
+              <width>0</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+              <kerning>true</kerning>
+             </font>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>false</bool>
+            </property>
+            <property name="showGrid">
+             <bool>true</bool>
+            </property>
+            <property name="gridStyle">
+             <enum>Qt::SolidLine</enum>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderStretchLastSection">
+             <bool>false</bool>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Код материала</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Тип эксперимента</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Номер эксперимента</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Температура</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Примечание</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>Значение</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Эксперимент</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QTableWidget" name="tStricker">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>120</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+              <kerning>true</kerning>
+             </font>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>false</bool>
+            </property>
+            <property name="showGrid">
+             <bool>true</bool>
+            </property>
+            <property name="gridStyle">
+             <enum>Qt::SolidLine</enum>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderStretchLastSection">
+             <bool>false</bool>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>L, мм</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>D, мм</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>V, м/c</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>P, атм</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>материал</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>Значение</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+       <zorder></zorder>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Импульсы</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <layout class="QVBoxLayout" name="vlPulses"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Диаграмма</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <layout class="QVBoxLayout" name="vlDiagramm"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Сводная диаграмма</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QSplitter" name="splitter">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QListWidget" name="lwExperiments"/>
+          <widget class="QWidget" name="verticalLayoutWidget">
+           <layout class="QVBoxLayout" name="vlComparDiag"/>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="QGroupBox" name="gbX">
+            <property name="title">
+             <string>X</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QRadioButton" name="0">
+               <property name="text">
+                <string>t</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_2">
+               <property name="text">
+                <string>e</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_3">
+               <property name="text">
+                <string>s</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_4">
+               <property name="text">
+                <string>de</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="gbY2">
+            <property name="title">
+             <string>Y2</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <widget class="QRadioButton" name="radioButton_9">
+               <property name="text">
+                <string>нет</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_10">
+               <property name="text">
+                <string>t</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_11">
+               <property name="text">
+                <string>e</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_12">
+               <property name="text">
+                <string>s</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_13">
+               <property name="text">
+                <string>de</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="gbY">
+            <property name="title">
+             <string>Y1</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <widget class="QRadioButton" name="radioButton_5">
+               <property name="text">
+                <string>t</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_6">
+               <property name="text">
+                <string>e</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_7">
+               <property name="text">
+                <string>s</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_8">
+               <property name="text">
+                <string>de</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>660</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="actionClose"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>Log</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <widget class="QListWidget" name="lLog">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionChooseInstrument">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/icons/New Document.png</normaloff>:/icons/New Document.png</iconset>
+   </property>
+   <property name="text">
+    <string>Выбрать прибор</string>
+   </property>
+  </action>
+  <action name="actionReadData">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/read.png</normaloff>:/icons/ui/read.png</iconset>
+   </property>
+   <property name="text">
+    <string>Считать данные</string>
+   </property>
+  </action>
+  <action name="actionSaveData">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/icons/document-save.png</normaloff>:/icons/document-save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/icons/system-log-out.png</normaloff>:/icons/system-log-out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="actionZoom">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/Gnome-Zoom-Fit-Best-32.png</normaloff>:/icons/ui/Gnome-Zoom-Fit-Best-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom</string>
+   </property>
+   <property name="toolTip">
+    <string>Увеличение</string>
+   </property>
+  </action>
+  <action name="actionPan">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/Mouse_32.png</normaloff>:/icons/ui/Mouse_32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pan</string>
+   </property>
+   <property name="toolTip">
+    <string>Смещение</string>
+   </property>
+  </action>
+  <action name="actionInterval">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/Pen-marker-32.png</normaloff>:/icons/ui/Pen-marker-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Interval</string>
+   </property>
+   <property name="toolTip">
+    <string>Выбор интервала</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/Gnome-Edit-Cut-32.png</normaloff>:/icons/ui/Gnome-Edit-Cut-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+   <property name="toolTip">
+    <string>Вырезать</string>
+   </property>
+  </action>
+  <action name="actionCalcV">
+   <property name="text">
+    <string>Скорость ударника</string>
+   </property>
+   <property name="toolTip">
+    <string>Рассчитать значение скорости</string>
+   </property>
+   <property name="whatsThis">
+    <string>йвйцвйцвйцв</string>
+   </property>
+  </action>
+  <action name="actionCalcVsetup">
+   <property name="text">
+    <string>calcVsetup</string>
+   </property>
+  </action>
+  <action name="actionSetExperiment">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Эксперимент</string>
+   </property>
+   <property name="toolTip">
+    <string>Установить режим проведения эксперимента</string>
+   </property>
+  </action>
+  <action name="actionSetCalibration">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Калибровка</string>
+   </property>
+   <property name="toolTip">
+    <string>Установить режим калибровки измерительных каналов</string>
+   </property>
+  </action>
+  <action name="actionOpenDatabase">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/fileopen-32.png</normaloff>:/icons/ui/fileopen-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>OpenDatabase</string>
+   </property>
+   <property name="toolTip">
+    <string>Открыть</string>
+   </property>
+  </action>
+  <action name="actionMplHome">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/Fullscreen.png</normaloff>:/icons/ui/Fullscreen.png</iconset>
+   </property>
+   <property name="text">
+    <string>mplHome</string>
+   </property>
+   <property name="toolTip">
+    <string>Полный вид</string>
+   </property>
+  </action>
+  <action name="actionZero">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/zero.png</normaloff>:/icons/ui/zero.png</iconset>
+   </property>
+   <property name="text">
+    <string>zero</string>
+   </property>
+   <property name="toolTip">
+    <string>Установка нуля</string>
+   </property>
+  </action>
+  <action name="actionSmooth">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/filter_32x32.png</normaloff>:/icons/ui/filter_32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Smooth</string>
+   </property>
+   <property name="toolTip">
+    <string>Сглаживание</string>
+   </property>
+  </action>
+  <action name="actionSaveOSC">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/filesave-32.png</normaloff>:/icons/ui/filesave-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>SaveOSC</string>
+   </property>
+   <property name="toolTip">
+    <string>Сохранить осциллограмму в базу</string>
+   </property>
+  </action>
+  <action name="actionReadPulses">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/Transfer Document.png</normaloff>:/icons/ui/Transfer Document.png</iconset>
+   </property>
+   <property name="text">
+    <string>ReadPulses</string>
+   </property>
+  </action>
+  <action name="actionSaveExpData">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/filesave-32.png</normaloff>:/icons/ui/filesave-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>SaveExpData</string>
+   </property>
+  </action>
+  <action name="actionSaveToDat">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/diagrammer.png</normaloff>:/icons/ui/diagrammer.png</iconset>
+   </property>
+   <property name="text">
+    <string>SaveToDat</string>
+   </property>
+  </action>
+  <action name="actionSavePulses">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/filesave-32.png</normaloff>:/icons/ui/filesave-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>SavePulses</string>
+   </property>
+  </action>
+  <action name="actionUpdateDiagramm">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/Transfer Document.png</normaloff>:/icons/ui/Transfer Document.png</iconset>
+   </property>
+   <property name="text">
+    <string>UpdateDiagramm</string>
+   </property>
+  </action>
+  <action name="actionOpenOSC">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/fileopen-32.png</normaloff>:/icons/ui/fileopen-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>OpenOsc</string>
+   </property>
+  </action>
+  <action name="actionUpdateODBCContent">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/Transfer Document.png</normaloff>:/icons/ui/Transfer Document.png</iconset>
+   </property>
+   <property name="text">
+    <string>UpdateODBCContent</string>
+   </property>
+  </action>
+  <action name="actionSyncPulses">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/sync.PNG</normaloff>:/icons/ui/sync.PNG</iconset>
+   </property>
+   <property name="text">
+    <string>SyncPulses</string>
+   </property>
+  </action>
+  <action name="actionReduceData">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/thinout.png</normaloff>:/icons/ui/thinout.png</iconset>
+   </property>
+   <property name="text">
+    <string>ReduceData</string>
+   </property>
+  </action>
+  <action name="actionPlotCurve">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/pencil.png</normaloff>:/icons/ui/pencil.png</iconset>
+   </property>
+   <property name="text">
+    <string>PlotCurve</string>
+   </property>
+  </action>
+  <action name="actionApplyCurve">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/apply.png</normaloff>:/icons/ui/apply.png</iconset>
+   </property>
+   <property name="text">
+    <string>ApplyCurve</string>
+   </property>
+  </action>
+  <action name="actionDeleteLine">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/trash-full.png</normaloff>:/icons/ui/trash-full.png</iconset>
+   </property>
+   <property name="text">
+    <string>DeleteLine</string>
+   </property>
+  </action>
+  <action name="actionCompressCurve">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/compress.png</normaloff>:/icons/ui/compress.png</iconset>
+   </property>
+   <property name="text">
+    <string>CompressCurve</string>
+   </property>
+   <property name="toolTip">
+    <string>CompressCurve</string>
+   </property>
+  </action>
+  <action name="actionPolyFit">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/polyfit.png</normaloff>:/icons/ui/polyfit.png</iconset>
+   </property>
+   <property name="text">
+    <string>PolyFit</string>
+   </property>
+  </action>
+  <action name="actionScaleRays">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/increasing-stocks-graphic.png</normaloff>:/icons/ui/increasing-stocks-graphic.png</iconset>
+   </property>
+   <property name="text">
+    <string>ScaleRays</string>
+   </property>
+  </action>
+  <action name="actionXLSexport">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/excel-icon1.png</normaloff>:/icons/ui/excel-icon1.png</iconset>
+   </property>
+   <property name="text">
+    <string>XLSexport</string>
+   </property>
+  </action>
+  <action name="actionCheckAll">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/check-all.png</normaloff>:/icons/ui/check-all.png</iconset>
+   </property>
+   <property name="text">
+    <string>CheckAll</string>
+   </property>
+  </action>
+  <action name="actionCheckNone">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/tick-box-png-unchecked-checkbox-icon-png-50-px-1600.png</normaloff>:/icons/ui/tick-box-png-unchecked-checkbox-icon-png-50-px-1600.png</iconset>
+   </property>
+   <property name="text">
+    <string>CheckNone</string>
+   </property>
+  </action>
+  <action name="actionCreateReport">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/ui/Reports-icon.png</normaloff>:/icons/ui/Reports-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>CreateReport</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionClose</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>270</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

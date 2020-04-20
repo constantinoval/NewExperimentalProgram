@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>676</width>
+    <height>461</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Lvm edit</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/icons/Gnome-Applications-Accessories-32.png</normaloff>:/icons/Gnome-Applications-Accessories-32.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="MatplotlibWidget" name="mplwidget" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>676</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_copy_from_setup"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionBoxZoom"/>
+    <addaction name="actionPan"/>
+    <addaction name="actionInterval"/>
+    <addaction name="actionShowPos"/>
+    <addaction name="separator"/>
+    <addaction name="actionCut"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Обрабатывать лучи</string>
+    </property>
+    <addaction name="actionRayA"/>
+    <addaction name="actionRayB"/>
+    <addaction name="separator"/>
+    <addaction name="actionScaleRays"/>
+    <addaction name="actionExchangeRays"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionBoxZoom"/>
+   <addaction name="actionPan"/>
+   <addaction name="actionInterval"/>
+   <addaction name="actionDistance"/>
+   <addaction name="actionShowPos"/>
+   <addaction name="separator"/>
+   <addaction name="actionCut"/>
+   <addaction name="actionLowPassFilter"/>
+   <addaction name="actionThinout"/>
+   <addaction name="actionZero"/>
+   <addaction name="separator"/>
+   <addaction name="actionDrawCurve"/>
+   <addaction name="actionPolyfit"/>
+   <addaction name="actionApplyCurve"/>
+   <addaction name="actionClearCurve"/>
+   <addaction name="separator"/>
+   <addaction name="actionScaleY"/>
+   <addaction name="actionExp"/>
+   <addaction name="separator"/>
+   <addaction name="actionRayA"/>
+   <addaction name="actionRayB"/>
+   <addaction name="separator"/>
+   <addaction name="actionExit"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/fileopen-32.png</normaloff>:/icons/fileopen-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Открыть файл</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/filesave-32.png</normaloff>:/icons/filesave-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Сохранить файл</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionBoxZoom">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/Gnome-Zoom-Fit-Best-32.png</normaloff>:/icons/Gnome-Zoom-Fit-Best-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>BoxZoom</string>
+   </property>
+   <property name="toolTip">
+    <string>Масштабирование изображения</string>
+   </property>
+   <property name="shortcut">
+    <string>Z</string>
+   </property>
+  </action>
+  <action name="actionPan">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/Mouse_32.png</normaloff>:/icons/Mouse_32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pan</string>
+   </property>
+   <property name="toolTip">
+    <string>Перетаскивание</string>
+   </property>
+   <property name="shortcut">
+    <string>P</string>
+   </property>
+  </action>
+  <action name="actionInterval">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/Pen-marker-32.png</normaloff>:/icons/Pen-marker-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Interval</string>
+   </property>
+   <property name="toolTip">
+    <string>Выделение интервала</string>
+   </property>
+   <property name="shortcut">
+    <string>I</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/Gnome-Edit-Cut-32.png</normaloff>:/icons/Gnome-Edit-Cut-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+   <property name="toolTip">
+    <string>Вырезать интервал</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/Error-32.png</normaloff>:/icons/Error-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+   <property name="toolTip">
+    <string>Выход</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+X</string>
+   </property>
+  </action>
+  <action name="actionShowPos">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/altimeter_32.png</normaloff>:/icons/altimeter_32.png</iconset>
+   </property>
+   <property name="text">
+    <string>showPos</string>
+   </property>
+   <property name="toolTip">
+    <string>Показывать координаты</string>
+   </property>
+  </action>
+  <action name="actionDrawCurve">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/pencil.png</normaloff>:/icons/pencil.png</iconset>
+   </property>
+   <property name="text">
+    <string>DrawCurve</string>
+   </property>
+   <property name="toolTip">
+    <string>Рисование кривой</string>
+   </property>
+  </action>
+  <action name="actionApplyCurve">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/apply.png</normaloff>:/icons/apply.png</iconset>
+   </property>
+   <property name="text">
+    <string>ApplyCurve</string>
+   </property>
+   <property name="toolTip">
+    <string>Применить кривую к лучу</string>
+   </property>
+  </action>
+  <action name="actionClearCurve">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/trash-full.png</normaloff>:/icons/trash-full.png</iconset>
+   </property>
+   <property name="text">
+    <string>ClearCurve</string>
+   </property>
+   <property name="toolTip">
+    <string>Удалить кривую</string>
+   </property>
+  </action>
+  <action name="actionDistance">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/measure.png</normaloff>:/icons/measure.png</iconset>
+   </property>
+   <property name="text">
+    <string>distance</string>
+   </property>
+   <property name="toolTip">
+    <string>Измерение расстояний</string>
+   </property>
+   <property name="shortcut">
+    <string>D</string>
+   </property>
+  </action>
+  <action name="actionLowPassFilter">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/filter_32x32.png</normaloff>:/icons/filter_32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>LowPassFilter</string>
+   </property>
+   <property name="toolTip">
+    <string>Частотная фильтрация сигнала</string>
+   </property>
+  </action>
+  <action name="actionScaleY">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/Fullscreen.png</normaloff>:/icons/Fullscreen.png</iconset>
+   </property>
+   <property name="text">
+    <string>scaleY</string>
+   </property>
+   <property name="toolTip">
+    <string>масштабировать луч на выбранном интервале</string>
+   </property>
+  </action>
+  <action name="actionRayA">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/Blue Ball.png</normaloff>:/icons/Blue Ball.png</iconset>
+   </property>
+   <property name="text">
+    <string>канал 1</string>
+   </property>
+   <property name="toolTip">
+    <string>обрабатывать синюю кривую</string>
+   </property>
+  </action>
+  <action name="actionRayB">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/Green Ball.png</normaloff>:/icons/Green Ball.png</iconset>
+   </property>
+   <property name="text">
+    <string>канал 2</string>
+   </property>
+   <property name="toolTip">
+    <string>обрабатывать зеленую кривую</string>
+   </property>
+  </action>
+  <action name="actionExp">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/line.png</normaloff>
+     <normalon>:/icons/exp.png</normalon>:/icons/line.png</iconset>
+   </property>
+   <property name="text">
+    <string>exp</string>
+   </property>
+   <property name="toolTip">
+    <string>экспоненциальное/линейное стягивание</string>
+   </property>
+  </action>
+  <action name="actionPolyfit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/polyfit.png</normaloff>:/icons/polyfit.png</iconset>
+   </property>
+   <property name="text">
+    <string>polyfit</string>
+   </property>
+   <property name="toolTip">
+    <string>Аппроксимация полиномом</string>
+   </property>
+  </action>
+  <action name="actionThinout">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/thinout.png</normaloff>:/icons/thinout.png</iconset>
+   </property>
+   <property name="text">
+    <string>Проредить</string>
+   </property>
+   <property name="toolTip">
+    <string>проредить точки</string>
+   </property>
+  </action>
+  <action name="actionSave_copy_from_setup">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/filesave-32.png</normaloff>:/icons/filesave-32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save(copy from setup)</string>
+   </property>
+   <property name="toolTip">
+    <string>Скопировать описатель и сохранить</string>
+   </property>
+  </action>
+  <action name="actionZero">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/zero.png</normaloff>:/icons/zero.png</iconset>
+   </property>
+   <property name="text">
+    <string>zero</string>
+   </property>
+   <property name="toolTip">
+    <string>установка нуля</string>
+   </property>
+  </action>
+  <action name="actionScaleRays">
+   <property name="text">
+    <string>scaleRays</string>
+   </property>
+  </action>
+  <action name="actionExchangeRays">
+   <property name="text">
+    <string>exchangeRays</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MatplotlibWidget</class>
+   <extends>QWidget</extends>
+   <header>matplotlibwidget</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

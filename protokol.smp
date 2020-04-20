@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+
+<BODY>
+<IMG SRC="{logoImg}" ><BR>
+<TABLE BORDER=2 CELLSPACING=0 WIDTH=700><caption> <center><b>Лаборатория динамических испытаний материалов, НИИ механики ННГУ <BR>
+<br>Протокол динамического испытания &nbsp;&nbsp;&nbsp; {expCode}</caption><br><BR>
+<tr> <td  valign="top"> Материал</td><td  valign="top"><b>{matName}</b></ td><td  valign="top">Состояние</td><td  valign="top"><b>{matCondition}</b></td></tr><tr><td  valign="top">Тип эксперимента</td><td  valign="top"><b>{expType}</b></td><td  valign="top">Дата эксперимента<br> Время эксперимента</td><td  valign="top"> <b>{expDate}<br>{expTime}</b></tr><tr></td><td  valign="top"> Экспериментальная установка</td><td  valign="top"><b>{expSetup}</b></td><td  valign="top"> Ответственный за проведение эксперимента</td><td  valign="top"><b>{expChief}</b></td></tr><tr><td  valign="top">Температура  в помещении, град.С</td><td  valign="top"><b>{roomTemp}</b></td><td  valign="top">Влажность в помещении, %</td><td  valign="top"><b>{roomWetness}</b></td></tr><tr><td  valign="top">Температура образца, град.С</td><td  valign="top"><b>{expTemp}</b></td><td  valign="top">Примечание</td><td  valign="top"><b>{expRemark}</b></td></tr>
+{expAdditionalCells}
+</table >
+<TABLE BORDER=2 CELLSPACING=0 WIDTH=700><caption> <center><b>Образец № &nbsp;&nbsp;&nbsp{expCode}</caption><br><BR>
+<tr><td  valign="top">Длина рабочей части, мм</td><td  valign="top"> Площадь поперечного сечения, мм.кв.<td  valign="top"> Примечание </td></tr><td  valign="top"><b>{sampleL}</b></ td><td  valign="top"><b>{sampleS:.2f}</b></td><td  valign="top"><b>{sampleRemark}</b></td></tr>
+</table >
+<TABLE BORDER=2 CELLSPACING=0 WIDTH=700><caption> <center><b>Мерные стержни</b></caption><br><BR>
+<tr> <td  valign="top">Параметр</td><td  valign="top">Нагружающий</td><td valign="top">Опорный</td></tr><tr><td  valign="top">Материал</td><td valign="top"><b>{bar1Mat}</b></ td><td  valign="top"><b>{bar2Mat}</b></ td></ tr><tr><td  valign="top">Площадь, мм.кв.</td><td  valign="top"><b>{bar1S}</b></ td><td  valign="top"><b>{bar2S}</b></ td></ tr><tr><td  valign="top">Модуль упругости, МПа</td><td valign="top"><b>{bar1E}</b></ td><td  valign="top"><b>{bar2E}</b></ td></ tr><tr><td valign="top">Скорость звука, м/сек</td><td  valign="top"><b>{bar1C}</b></ td><td valign="top"><b>{bar2C}</b></ td></ tr><tr><td  valign="top">Калибровочный коэффициент</td><td  valign="top"><b>{bar1K}</b></ td><td  valign="top"><b>{bar2K}</b></ td></ tr><BR>
+<tr><td  valign="top">Длина стержня</td><td  valign="top"><b>{bar1L}</b></ td><td  valign="top"><b>{bar2L}</b></ td><tr><td  valign="top">Положение датчика</td><td  valign="top"><b>{gauge1Position}</b></ td><td valign="top"><b>{gauge2Position}</b></ td><BR><tr><td valign="top">Примечание</td><td  COLSPAN=2 ><b>{barsRemark}</b></ td></ tr></table >
+<TABLE BORDER=2 CELLSPACING=0 WIDTH=700><caption> <center><b>Ударник</b><BR>
+</caption><br><BR><BR><tr> <td  valign="top">Материал</td><td  valign="top">Диаметр, мм</td><td  valign="top">Длина,мм</td><td  valign="top">Скорость, м/сек</td></tr><tr><td  valign="top"><b>{strikerMat}</b> </td><td valign="top"> <b> {strikerD}</b></td><td  valign="top"><b>{strikerL}</b> </td><td  valign="top"><b> {strikerV:.1f}</td></tr></table>
+
+{syncImg}<BR>
+{diagrImg}<BR><BR>
+
+{tableLines}
+
+</BODY>
+</HTML>

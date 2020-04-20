@@ -1,0 +1,27 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>polyfit.png</file>
+    <file>thinout.png</file>
+    <file>Blue Ball.png</file>
+    <file>exp.png</file>
+    <file>line.png</file>
+    <file>filter_32x32.png</file>
+    <file>pencil.png</file>
+    <file>Green Ball.png</file>
+    <file>zero.png</file>
+    <file>Fullscreen.png</file>
+    <file>trash-full.png</file>
+    <file>apply.png</file>
+    <file>Stop-32.png</file>
+    <file>altimeter_32.png</file>
+    <file>Gnome-Applications-Accessories-32.png</file>
+    <file>Pen-marker-32.png</file>
+    <file>Mouse_32.png</file>
+    <file>fileopen-32.png</file>
+    <file>Gnome-Edit-Cut-32.png</file>
+    <file>filesave-32.png</file>
+    <file>Gnome-Zoom-Fit-Best-32.png</file>
+    <file>Error-32.png</file>
+    <file>measure.png</file>
+  </qresource>
+</RCC>

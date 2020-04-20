@@ -1,0 +1,29 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>ui/Ecorr.png</file>
+    <file>ui/read.png</file>
+    <file>ui/Reports-icon.png</file>
+    <file>ui/sync.PNG</file>
+    <file>ui/check-all.png</file>
+    <file>ui/tick-box-png-unchecked-checkbox-icon-png-50-px-1600.png</file>
+    <file>ui/excel-icon1.png</file>
+    <file>ui/apply.png</file>
+    <file>ui/increasing-stocks-graphic.png</file>
+    <file>ui/compress.png</file>
+    <file>ui/diagrammer.png</file>
+    <file>ui/Transfer Document.png</file>
+    <file>ui/filesave-32.png</file>
+    <file>ui/zero.png</file>
+    <file>ui/Fullscreen.png</file>
+    <file>ui/filter_32x32.png</file>
+    <file>ui/fileopen-32.png</file>
+    <file>ui/Gnome-Edit-Cut-32.png</file>
+    <file>ui/trash-full.png</file>
+    <file>ui/Pen-marker-32.png</file>
+    <file>ui/thinout.png</file>
+    <file>ui/polyfit.png</file>
+    <file>ui/pencil.png</file>
+    <file>ui/Mouse_32.png</file>
+    <file>ui/Gnome-Zoom-Fit-Best-32.png</file>
+  </qresource>
+</RCC>
